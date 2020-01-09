@@ -1,0 +1,13 @@
+Set objExcel = CreateObject("Excel.Application")
+set objShell = WScript.CreateObject ("WScript.Shell")
+
+dim cur 
+cur = objShell.CurrentDirectory
+dim n 
+n = "'"
+dim n2 
+n2= "\name.xlsm'!Module1.refresh"
+
+objExcel.Application.Run n&cur&n2
+objExcel.Application.Quit
+Set objExcel = Nothing
